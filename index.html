@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sekolah Mahabodhi Vidya - Prototype</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config for Custom Colors and Fonts -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        saffron: {
+                            400: '#F59E0B',
+                            500: '#D97706', // Buddhist monk robe vibe
+                            600: '#B45309',
+                        },
+                        buddhistBlue: '#1E3A8A', // Deep calming blue
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom CSS for Dropdown Hover functionality in plain HTML */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-700 bg-slate-50 antialiased">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                
+                <!-- Logo & Brand -->
+                <div class="flex items-center">
+                    <!-- Lotus Icon Placeholder -->
+                    <svg class="w-10 h-10 text-saffron-500 mr-3" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C12 2 11 6 7 8C3 10 2 14 2 14C2 14 5 13 8 14C11 15 12 19 12 19C12 19 13 15 16 14C19 13 22 14 22 14C22 14 21 10 17 8C13 6 12 2 12 2Z"/>
+                        <path d="M12 22C12 22 10 19 6 18C2 17 1 14 1 14C1 14 4 15 7 15.5C10 16 12 22 12 22Z"/>
+                        <path d="M12 22C12 22 14 19 18 18C22 17 23 14 23 14C23 14 20 15 17 15.5C14 16 12 22 12 22Z"/>
+                    </svg>
+                    <div>
+                        <h1 class="font-serif font-bold text-xl text-buddhistBlue leading-tight">SEKOLAH</h1>
+                        <h1 class="font-serif font-bold text-xl text-saffron-600 leading-tight">MAHABODHI VIDYA</h1>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu (Sitemap Integration) -->
+                <div class="hidden md:flex items-center space-x-1 lg:space-x-4">
+                    
+                    <!-- About Us Dropdown -->
+                    <div class="relative group dropdown">
+                        <button class="px-3 py-2 rounded-md text-sm font-medium hover:text-saffron-600 transition inline-flex items-center">
+                            About Us
+                            <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="dropdown-menu absolute hidden pt-2 w-48 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-saffron-50 hover:text-saffron-600">Vision, Mission & Motto</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-saffron-50 hover:text-saffron-600">9 Values</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-saffron-50 hover:text-saffron-600">History</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-saffron-50 hover:text-saffron-600">Facility</a>
+                        </div>
+                    </div>
+
+                    <!-- Academics Dropdown -->
+                    <div class="relative group dropdown">
+                        <button class="px-3 py-2 rounded-md text-sm font-medium hover:text-saffron-600 transition inline-flex items-center">
+                            Academics
+                            <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="dropdown-menu absolute hidden pt-2 w-48 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-saffron-50 hover:text-saffron-600">Kindergarten</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-saffron-50 hover:text-saffron-600">Primary</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-saffron-50 hover:text-saffron-600">Secondary</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-saffron-50 hover:text-saffron-600">High School</a>
+                        </div>
+                    </div>
+
+                    <!-- Standard Links -->
+                    <a href="#" class="px-3 py-2 rounded-md text-sm font-medium hover:text-saffron-600 transition">Events</a>
+                    <a href="#" class="px-3 py-2 rounded-md text-sm font-medium hover:text-saffron-600 transition">News</a>
+                    <a href="#" class="px-3 py-2 rounded-md text-sm font-medium hover:text-saffron-600 transition">Gallery</a>
+                    <a href="#" class="px-3 py-2 rounded-md text-sm font-medium hover:text-saffron-600 transition">Achievement</a>
+                    <a href="#" class="px-3 py-2 rounded-md text-sm font-medium hover:text-saffron-600 transition">Contact Us</a>
+
+                    <!-- CTA Admission -->
+                    <a href="#" class="ml-4 bg-saffron-500 hover:bg-saffron-600 text-white px-5 py-2 rounded-full text-sm font-semibold transition shadow-md">
+                        Admission
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative bg-gray-900 h-[80vh] flex items-center justify-center">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <!-- Using an Unsplash image of a serene temple/school architecture -->
+            <img src="https://images.unsplash.com/photo-1544868725-b46761825656?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Sekolah Mahabodhi" class="w-full h-full object-cover opacity-40">
+        </div>
+        
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <h2 class="font-serif text-4xl md:text-6xl text-white font-bold mb-6 leading-tight">
+                Nurturing Wisdom & <span class="text-saffron-400">Compassion</span>
+            </h2>
+            <p class="text-lg md:text-xl text-gray-200 mb-8 font-light">
+                Membangun generasi penerus yang unggul dalam akademik dan berbudi pekerti luhur berlandaskan nilai-nilai universal Buddha Dharma.
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="#" class="bg-saffron-500 hover:bg-saffron-600 text-white px-8 py-3 rounded-full font-medium transition shadow-lg text-lg">
+                    Daftar Sekarang
+                </a>
+                <a href="#" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-full font-medium transition shadow-lg text-lg">
+                    Jelajahi Program
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- VALUES SECTION (From Sitemap: 9 Values) -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="font-serif text-3xl text-buddhistBlue font-bold mb-4">Membangun Karakter Mulia</h3>
+            <div class="w-24 h-1 bg-saffron-500 mx-auto mb-8"></div>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-12">
+                Mahabodhi Vidya menanamkan nilai-nilai luhur dalam setiap langkah pendidikan untuk menciptakan keharmonisan intelektual dan spiritual.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Value Card 1 -->
+                <div class="p-6 border border-gray-100 rounded-2xl shadow-sm hover:shadow-xl transition duration-300">
+                    <div class="w-14 h-14 bg-saffron-100 rounded-full flex items-center justify-center mx-auto mb-4 text-saffron-600">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-xl mb-2">Wisdom (Prajna)</h4>
+                    <p class="text-gray-500 text-sm">Mengembangkan pemahaman yang benar dan pemikiran kritis dalam menyerap ilmu pengetahuan.</p>
+                </div>
+                <!-- Value Card 2 -->
+                <div class="p-6 border border-gray-100 rounded-2xl shadow-sm hover:shadow-xl transition duration-300">
+                    <div class="w-14 h-14 bg-saffron-100 rounded-full flex items-center justify-center mx-auto mb-4 text-saffron-600">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-xl mb-2">Compassion (Karuna)</h4>
+                    <p class="text-gray-500 text-sm">Menumbuhkan rasa welas asih dan kepedulian terhadap sesama makhluk hidup dan lingkungan.</p>
+                </div>
+                <!-- Value Card 3 -->
+                <div class="p-6 border border-gray-100 rounded-2xl shadow-sm hover:shadow-xl transition duration-300">
+                    <div class="w-14 h-14 bg-saffron-100 rounded-full flex items-center justify-center mx-auto mb-4 text-saffron-600">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-xl mb-2">Mindfulness (Sati)</h4>
+                    <p class="text-gray-500 text-sm">Kesadaran penuh dalam setiap tindakan dan ucapan untuk membentuk kedisiplinan diri.</p>
+                </div>
+            </div>
+            <div class="mt-8">
+                <a href="#" class="text-saffron-600 font-medium hover:underline">Pelajari 9 Values Kami &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACADEMICS SECTION (Mapping from Sitemap) -->
+    <section class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="font-serif text-3xl text-buddhistBlue font-bold mb-4">Tingkat Pendidikan</h3>
+                <div class="w-24 h-1 bg-saffron-500 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Kindergarten -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg group">
+                    <img src="https://images.unsplash.com/photo-1587654780228-6515b6192461?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kindergarten" class="h-48 w-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="p-6">
+                        <h4 class="font-bold text-xl mb-2 text-buddhistBlue">Kindergarten</h4>
+                        <p class="text-sm text-gray-500 mb-4">Fondasi awal yang menyenangkan dengan pendekatan bermain sambil belajar.</p>
+                        <div class="flex flex-col space-y-2 text-sm font-medium text-saffron-600">
+                            <a href="#" class="hover:text-saffron-800 flex items-center">&rarr; Programs</a>
+                            <a href="#" class="hover:text-saffron-800 flex items-center">&rarr; Extracurricular</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Primary -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg group">
+                    <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Primary" class="h-48 w-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="p-6">
+                        <h4 class="font-bold text-xl mb-2 text-buddhistBlue">Primary</h4>
+                        <p class="text-sm text-gray-500 mb-4">Membangun dasar akademik dan etika yang kuat di usia pertumbuhan emas.</p>
+                        <div class="flex flex-col space-y-2 text-sm font-medium text-saffron-600">
+                            <a href="#" class="hover:text-saffron-800 flex items-center">&rarr; Programs</a>
+                            <a href="#" class="hover:text-saffron-800 flex items-center">&rarr; Extracurricular</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Secondary -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg group">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Secondary" class="h-48 w-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="p-6">
+                        <h4 class="font-bold text-xl mb-2 text-buddhistBlue">Secondary</h4>
+                        <p class="text-sm text-gray-500 mb-4">Pengembangan bakat, kepemimpinan, dan pemahaman akademik mendalam.</p>
+                        <div class="flex flex-col space-y-2 text-sm font-medium text-saffron-600">
+                            <a href="#" class="hover:text-saffron-800 flex items-center">&rarr; Programs</a>
+                            <a href="#" class="hover:text-saffron-800 flex items-center">&rarr; Extracurricular</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- High School -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg group">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="High School" class="h-48 w-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="p-6">
+                        <h4 class="font-bold text-xl mb-2 text-buddhistBlue">High School</h4>
+                        <p class="text-sm text-gray-500 mb-4">Persiapan komprehensif menuju pendidikan tinggi dan kehidupan bermasyarakat.</p>
+                        <div class="flex flex-col space-y-2 text-sm font-medium text-saffron-600">
+                            <a href="#" class="hover:text-saffron-800 flex items-center">&rarr; Programs</a>
+                            <a href="#" class="hover:text-saffron-800 flex items-center">&rarr; Extracurricular</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-300 py-12 border-t-4 border-saffron-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="col-span-1 md:col-span-1">
+                <div class="flex items-center mb-4">
+                     <svg class="w-8 h-8 text-saffron-500 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C12 2 11 6 7 8C3 10 2 14 2 14C2 14 5 13 8 14C11 15 12 19 12 19C12 19 13 15 16 14C19 13 22 14 22 14C22 14 21 10 17 8C13 6 12 2 12 2Z"/><path d="M12 22C12 22 10 19 6 18C2 17 1 14 1 14C1 14 4 15 7 15.5C10 16 12 22 12 22Z"/><path d="M12 22C12 22 14 19 18 18C22 17 23 14 23 14C23 14 20 15 17 15.5C14 16 12 22 12 22Z"/></svg>
+                    <span class="font-serif font-bold text-lg text-white">MAHABODHI VIDYA</span>
+                </div>
+                <p class="text-sm">Nurturing Wisdom and Compassion. Membimbing generasi emas dengan ajaran welas asih.</p>
+            </div>
+            
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Quick Links</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-saffron-400">About Us</a></li>
+                    <li><a href="#" class="hover:text-saffron-400">Events & News</a></li>
+                    <li><a href="#" class="hover:text-saffron-400">Gallery</a></li>
+                    <li><a href="#" class="hover:text-saffron-400">Achievement</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Academics</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-saffron-400">Kindergarten</a></li>
+                    <li><a href="#" class="hover:text-saffron-400">Primary</a></li>
+                    <li><a href="#" class="hover:text-saffron-400">Secondary</a></li>
+                    <li><a href="#" class="hover:text-saffron-400">High School</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Contact Us</h4>
+                <ul class="space-y-2 text-sm">
+                    <li>Jl. Pangeran Jayakarta No. 123, Jakarta</li>
+                    <li>info@mahabodhividya.sch.id</li>
+                    <li>+62 21 1234 5678</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 mt-8 pt-8 border-t border-gray-800 text-sm text-center">
+            &copy; 2026 Sekolah Mahabodhi Vidya. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
