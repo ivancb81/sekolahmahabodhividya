@@ -144,79 +144,96 @@
         </div>
     </nav>
 
-    <header class="relative w-full h-screen overflow-hidden group bg-gray-900">
+    <!-- HERO / JUMBOTRON SLIDER SECTION (Bulletproof Mobile Edition) -->
+    <!-- Tambahan min-h-[600px] menjamin slider tidak pernah tergencet di HP -->
+    <header class="relative w-full h-screen min-h-[600px] overflow-hidden group bg-gray-900">
         
         <div id="slider-wrapper" class="flex w-full h-full transition-transform duration-700 ease-in-out">
-            <div class="slider-slide min-w-full h-full relative flex items-center justify-center flex-shrink-0">
+            
+            <!-- SLIDE 1 -->
+            <div class="slider-slide w-full h-full relative flex items-center justify-center flex-shrink-0">
+                <!-- Background & Overlay -->
                 <div class="absolute inset-0 z-0">
-                    <img src="./pictures/mahabodhi.jpg" alt="Gedung Sekolah Mahabodhi" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black/40"></div>
-                    <div class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/70 to-transparent"></div>
+                    <img src="./pictures/mahabodhi.jpg" alt="Gedung Sekolah Mahabodhi" class="w-full h-full object-cover object-center">
+                    <div class="absolute inset-0 bg-black/60"></div>
+                    <!-- Gradasi atas sedikit diperbesar agar Navbar putih tetap kontras di HP -->
+                    <div class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/80 to-transparent"></div>
                 </div>
                 
-                <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16">
-                    <h2 class="font-serif text-4xl md:text-6xl text-white font-bold mb-6 leading-tight drop-shadow-lg">
-                        Nurturing Wisdom & <span class="text-saffron-400">Compassion</span>
-                    </h2>
-                    <p class="text-lg md:text-xl text-gray-200 mb-8 font-light drop-shadow-md">
-                        Membangun generasi penerus yang unggul dalam akademik dan berbudi pekerti luhur berlandaskan nilai-nilai universal Buddha Dharma.
-                    </p>
-                    <div class="flex justify-center gap-4">
-                        <a href="#" class="bg-saffron-500 hover:bg-saffron-600 text-white px-8 py-3 rounded-full font-medium transition shadow-lg text-sm md:text-base">
-                            Daftar Sekarang
-                        </a>
+                <!-- Content Container: Menggunakan w-full dan px-4 agar aman di kiri-kanan -->
+                <div class="relative z-10 w-full px-4 sm:px-6 flex flex-col items-center justify-center text-center mt-12 md:mt-0">
+                    <div class="max-w-4xl mx-auto w-full">
+                        <!-- break-words memastikan kata panjang tidak merusak layar HP -->
+                        <h2 class="font-serif text-3xl sm:text-4xl md:text-6xl text-white font-bold mb-4 md:mb-6 leading-tight drop-shadow-lg break-words">
+                            Nurturing Wisdom <br class="md:hidden" /> <span class="text-saffron-400">& Compassion</span>
+                        </h2>
+                        <p class="text-base md:text-xl text-gray-200 mb-8 font-light drop-shadow-md max-w-2xl mx-auto line-clamp-3 md:line-clamp-none">
+                            Membangun generasi penerus yang unggul dalam akademik dan berbudi pekerti luhur berlandaskan nilai-nilai universal Buddha Dharma.
+                        </p>
+                        <div class="flex justify-center w-full">
+                            <a href="#" class="bg-saffron-500 hover:bg-saffron-600 text-white px-8 py-3 rounded-full font-medium transition shadow-lg text-sm md:text-base w-[80%] sm:w-auto">
+                                Daftar Sekarang
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="slider-slide min-w-full h-full relative flex items-center justify-center flex-shrink-0">
+            <!-- SLIDE 2 -->
+            <div class="slider-slide w-full h-full relative flex items-center justify-center flex-shrink-0">
                 <div class="absolute inset-0 z-0">
-                    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Fasilitas Belajar" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-buddhistBlue/50"></div>
-                    <div class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/70 to-transparent"></div>
+                    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Fasilitas Belajar" class="w-full h-full object-cover object-center">
+                    <div class="absolute inset-0 bg-buddhistBlue/60"></div>
+                    <div class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/80 to-transparent"></div>
                 </div>
-                <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16">
-                    <h2 class="font-serif text-4xl md:text-6xl text-white font-bold mb-6 leading-tight drop-shadow-lg">
-                        Fasilitas Bertaraf <span class="text-saffron-400">Internasional</span>
-                    </h2>
-                    <p class="text-lg md:text-xl text-gray-200 mb-8 font-light drop-shadow-md">
-                        Mendukung proses eksplorasi siswa dengan laboratorium, perpustakaan, dan sarana olahraga yang modern dan lengkap.
-                    </p>
-                    <div class="flex justify-center gap-4">
-                        <a href="#" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-buddhistBlue px-8 py-3 rounded-full font-medium transition shadow-lg text-sm md:text-base">
-                            Lihat Fasilitas
-                        </a>
+                <div class="relative z-10 w-full px-4 sm:px-6 flex flex-col items-center justify-center text-center mt-12 md:mt-0">
+                    <div class="max-w-4xl mx-auto w-full">
+                        <h2 class="font-serif text-3xl sm:text-4xl md:text-6xl text-white font-bold mb-4 md:mb-6 leading-tight drop-shadow-lg break-words">
+                            Fasilitas Bertaraf <br class="md:hidden" /> <span class="text-saffron-400">Internasional</span>
+                        </h2>
+                        <p class="text-base md:text-xl text-gray-200 mb-8 font-light drop-shadow-md max-w-2xl mx-auto line-clamp-3 md:line-clamp-none">
+                            Mendukung proses eksplorasi siswa dengan laboratorium, perpustakaan, dan sarana olahraga yang modern dan lengkap.
+                        </p>
+                        <div class="flex justify-center w-full">
+                            <a href="#" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-buddhistBlue px-8 py-3 rounded-full font-medium transition shadow-lg text-sm md:text-base w-[80%] sm:w-auto">
+                                Lihat Fasilitas
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <div class="slider-slide min-w-full h-full relative flex items-center justify-center flex-shrink-0">
+            <!-- SLIDE 3 -->
+            <div class="slider-slide w-full h-full relative flex items-center justify-center flex-shrink-0">
                 <div class="absolute inset-0 z-0">
-                    <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Siswa Aktif" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black/60"></div>
-                    <div class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/70 to-transparent"></div>
+                    <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Siswa Aktif" class="w-full h-full object-cover object-center">
+                    <div class="absolute inset-0 bg-black/70"></div>
+                    <div class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/80 to-transparent"></div>
                 </div>
-                <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16">
-                    <h2 class="font-serif text-4xl md:text-6xl text-white font-bold mb-6 leading-tight drop-shadow-lg">
-                        Membentuk Karakter <span class="text-saffron-400">Pemimpin</span>
-                    </h2>
-                    <p class="text-lg md:text-xl text-gray-200 mb-8 font-light drop-shadow-md">
-                        Melalui penerapan Mindfulness dan praktik nyata, kami mempersiapkan siswa menghadapi tantangan global dengan kebijaksanaan.
-                    </p>
-                    <div class="flex justify-center gap-4">
-                        <a href="#" class="bg-saffron-500 hover:bg-saffron-600 text-white px-8 py-3 rounded-full font-medium transition shadow-lg text-sm md:text-base">
-                            Jelajahi Program
-                        </a>
+                <div class="relative z-10 w-full px-4 sm:px-6 flex flex-col items-center justify-center text-center mt-12 md:mt-0">
+                    <div class="max-w-4xl mx-auto w-full">
+                        <h2 class="font-serif text-3xl sm:text-4xl md:text-6xl text-white font-bold mb-4 md:mb-6 leading-tight drop-shadow-lg break-words">
+                            Membentuk Karakter <br class="md:hidden" /> <span class="text-saffron-400">Pemimpin</span>
+                        </h2>
+                        <p class="text-base md:text-xl text-gray-200 mb-8 font-light drop-shadow-md max-w-2xl mx-auto line-clamp-3 md:line-clamp-none">
+                            Melalui penerapan Mindfulness dan praktik nyata, kami mempersiapkan siswa menghadapi tantangan global dengan kebijaksanaan.
+                        </p>
+                        <div class="flex justify-center w-full">
+                            <a href="#" class="bg-saffron-500 hover:bg-saffron-600 text-white px-8 py-3 rounded-full font-medium transition shadow-lg text-sm md:text-base w-[80%] sm:w-auto">
+                                Jelajahi Program
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <button id="btn-prev-slide" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/60 text-white w-12 h-12 flex items-center justify-center rounded-full backdrop-blur-sm transition opacity-0 group-hover:opacity-100 focus:opacity-100 z-20">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+        <!-- Tombol Navigasi Mobile dioptimalkan -->
+        <button id="btn-prev-slide" class="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white w-10 h-10 md:w-14 md:h-14 flex items-center justify-center rounded-full backdrop-blur-md transition opacity-0 group-hover:opacity-100 focus:opacity-100 z-20 shadow-lg">
+            <svg class="w-5 h-5 md:w-7 md:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
         </button>
-        <button id="btn-next-slide" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/60 text-white w-12 h-12 flex items-center justify-center rounded-full backdrop-blur-sm transition opacity-0 group-hover:opacity-100 focus:opacity-100 z-20">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        <button id="btn-next-slide" class="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white w-10 h-10 md:w-14 md:h-14 flex items-center justify-center rounded-full backdrop-blur-md transition opacity-0 group-hover:opacity-100 focus:opacity-100 z-20 shadow-lg">
+            <svg class="w-5 h-5 md:w-7 md:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
         </button>
     </header>
 
