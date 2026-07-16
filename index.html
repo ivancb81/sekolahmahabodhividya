@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sekolah Mahabodhi Vidya - Prototype</title>
+    <title>Sekolah Mahabodhi Vidya</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -146,7 +146,7 @@
 
     <!-- HERO / JUMBOTRON SLIDER SECTION (Bulletproof Mobile Edition) -->
     <!-- Tambahan min-h-[600px] menjamin slider tidak pernah tergencet di HP -->
-    <header class="relative w-full h-screen min-h-[600px] overflow-hidden group bg-gray-900">
+    <header class="relative w-full h-screen min-h-[600px] overflow-hidden bg-gray-900">
         
         <div id="slider-wrapper" class="flex w-full h-full transition-transform duration-700 ease-in-out">
             
@@ -228,13 +228,17 @@
             </div>
         </div>
 
-        <!-- Tombol Navigasi Mobile dioptimalkan -->
-        <button id="btn-prev-slide" class="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white w-10 h-10 md:w-14 md:h-14 flex items-center justify-center rounded-full backdrop-blur-md transition opacity-0 group-hover:opacity-100 focus:opacity-100 z-20 shadow-lg">
-            <svg class="w-5 h-5 md:w-7 md:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
-        </button>
-        <button id="btn-next-slide" class="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white w-10 h-10 md:w-14 md:h-14 flex items-center justify-center rounded-full backdrop-blur-md transition opacity-0 group-hover:opacity-100 focus:opacity-100 z-20 shadow-lg">
-            <svg class="w-5 h-5 md:w-7 md:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
-        </button>
+        <div class="absolute top-0 left-0 w-24 md:w-40 h-full z-20 flex items-center justify-start group">
+            <button id="btn-prev-slide" class="ml-2 md:ml-6 bg-white/20 hover:bg-white/50 text-white w-6 h-6 md:w-8 md:h-8 flex items-center justify-center rounded-full backdrop-blur-md transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 -translate-x-8 shadow-lg">
+                <svg class="w-3 h-3 md:w-3 md:h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
+            </button>
+        </div>
+
+        <div class="absolute top-0 right-0 w-24 md:w-40 h-full z-20 flex items-center justify-end group">
+            <button id="btn-next-slide" class="mr-2 md:mr-6 bg-white/20 hover:bg-white/50 text-white w-6 h-6 md:w-8 md:h-8 flex items-center justify-center rounded-full backdrop-blur-md transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 translate-x-8 shadow-lg">
+                <svg class="w-3 h-3 md:w-3 md:h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+            </button>
+        </div>
     </header>
 
     <section class="py-20 bg-white">
