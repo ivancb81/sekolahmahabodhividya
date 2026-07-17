@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sekolah Mahabodhi Vidya</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom CSS untuk menyembunyikan scrollbar pada slider horizontal tetapi tetap bisa di-scroll */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none; 
+            scrollbar-width: none; 
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-slate-50 relative">
+
+    <!-- 1. Navigation / Logo Section -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-center items-center h-20 relative">
+                
+                <!-- Teknik Overlap Image untuk Logo -->
+                <div class="relative flex items-center justify-center">
+                    <img id="logo-color" class="h-20 w-auto object-contain transition-opacity duration-300 opacity-0" src="images/logo-01.png" alt="Logo Mahabodhi Vidya">
+                    <img id="logo-white" class="absolute top-0 h-20 w-auto object-contain transition-opacity duration-300 opacity-100 drop-shadow-md" src="images/logo-02-01.png" alt="Logo Mahabodhi Vidya Putih">
+                </div>
+                
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. Hero Section -->
+    <header class="relative h-screen w-full flex items-center justify-center">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="pictures/mahabodhi.jpg" alt="Gedung Mahabodhi" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-black opacity-60"></div>
+        </div>
+        
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">Welcome to Mahabodhi Vidya</h1>
+            <p class="text-xl text-gray-200 mb-10 font-light">Empowering minds with compassion, integrity, and global excellence based on Buddhist principles.</p>
+            <!-- <a href="#values" class="inline-block bg-amber-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-amber-700 transition shadow-lg">Discover Our Values</a> -->
+        </div>
+    </header>
+
+    <!-- 3. Core Values Section -->
+    <section id="values" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 tracking-wide uppercase">Our Core Values</h2>
+                <div class="h-1 w-20 bg-amber-600 mx-auto mt-4"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-6 bg-slate-50 rounded-xl hover:shadow-md transition border border-gray-100"><h3 class="text-xl font-bold text-gray-900 mb-3">Care and Compassion</h3><p class="text-gray-600 text-sm leading-relaxed">Care for self and others.</p></div>
+                <div class="p-6 bg-slate-50 rounded-xl hover:shadow-md transition border border-gray-100"><h3 class="text-xl font-bold text-gray-900 mb-3">Responsibility</h3><p class="text-gray-600 text-sm leading-relaxed">Be accountable for one's own actions, resolve differences in constructive, non-violent and peaceful ways, contribute to society and to civic life, take care of the environment.</p></div>
+                <div class="p-6 bg-slate-50 rounded-xl hover:shadow-md transition border border-gray-100"><h3 class="text-xl font-bold text-gray-900 mb-3">Honesty</h3><p class="text-gray-600 text-sm leading-relaxed">Be honest, sincere and seek the truth.</p></div>
+                <div class="p-6 bg-slate-50 rounded-xl hover:shadow-md transition border border-gray-100"><h3 class="text-xl font-bold text-gray-900 mb-3">Respect</h3><p class="text-gray-600 text-sm leading-relaxed">Treat others with consideration and regards, respect another person's point of view.</p></div>
+                <div class="p-6 bg-slate-50 rounded-xl hover:shadow-md transition border border-gray-100"><h3 class="text-xl font-bold text-gray-900 mb-3">Fairness</h3><p class="text-gray-600 text-sm leading-relaxed">Pursue and protect the common good where all people are treated fairly for a just society.</p></div>
+                <div class="p-6 bg-slate-50 rounded-xl hover:shadow-md transition border border-gray-100"><h3 class="text-xl font-bold text-gray-900 mb-3">Understanding & Tolerance</h3><p class="text-gray-600 text-sm leading-relaxed">Be aware of others and their cultures, accept diversity within a democratic society.</p></div>
+                <div class="p-6 bg-slate-50 rounded-xl hover:shadow-md transition border border-gray-100"><h3 class="text-xl font-bold text-gray-900 mb-3">Doing Your Best</h3><p class="text-gray-600 text-sm leading-relaxed">Seek to accomplish something worthy and admirable, try hard, pursue excellence.</p></div>
+                <div class="p-6 bg-slate-50 rounded-xl hover:shadow-md transition border border-gray-100"><h3 class="text-xl font-bold text-gray-900 mb-3">Perseverance</h3><p class="text-gray-600 text-sm leading-relaxed">Keep trying to gain success.</p></div>
+                <div class="p-6 bg-slate-50 rounded-xl hover:shadow-md transition border border-gray-100"><h3 class="text-xl font-bold text-gray-900 mb-3">Integrity</h3><p class="text-gray-600 text-sm leading-relaxed">Act in accordance with principles of moral and ethical conduct, ensure consistency between words and deeds.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Academics Section -->
+    <section id="academics" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 tracking-wide uppercase">Academics</h2>
+                <div class="h-1 w-20 bg-amber-600 mx-auto mt-4"></div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col h-full hover:shadow-md transition group">
+                    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kindergarten" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="p-6 text-center flex-grow border-t-4 border-amber-600 relative bg-white">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Kindergarten</h3>
+                        <p class="text-gray-500 text-sm">Building a strong foundation with care.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col h-full hover:shadow-md transition group">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Primary" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="p-6 text-center flex-grow border-t-4 border-amber-600 relative bg-white">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Primary</h3>
+                        <p class="text-gray-500 text-sm">Fostering curiosity and active learning.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col h-full hover:shadow-md transition group">
+                    <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Secondary" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="p-6 text-center flex-grow border-t-4 border-amber-600 relative bg-white">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Secondary</h3>
+                        <p class="text-gray-500 text-sm">Developing critical thinking and character.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col h-full hover:shadow-md transition group">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="High School" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="p-6 text-center flex-grow border-t-4 border-amber-600 relative bg-white">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">High School</h3>
+                        <p class="text-gray-500 text-sm">Preparing leaders for global excellence.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5 & 6. Gallery & Facility Section -->
+    <section id="gallery" class="py-20 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Gallery Section -->
+            <div class="mb-20">
+                <!-- Wrapper Judul dan Navigasi Panah menggunakan Flexbox -->
+                <div class="flex justify-between items-end mb-6">
+                    <h2 class="text-2xl font-bold text-gray-900">School Gallery</h2>
+                    
+                    <!-- Tombol Panah (Disembunyikan di Mobile, Tampil sejajar judul di Desktop) -->
+                    <div class="hidden md:flex space-x-3">
+                        <button onclick="slideLeft('gallery-slider')" class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:bg-amber-600 hover:text-white hover:border-amber-600 transition cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
+                        </button>
+                        <button onclick="slideRight('gallery-slider')" class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:bg-amber-600 hover:text-white hover:border-amber-600 transition cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Container Slider Gallery -->
+                <div id="gallery-slider" class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-6 hide-scrollbar">
+                    <!-- Foto Gallery 1: Siswa Belajar -->
+                    <div class="snap-center shrink-0 w-80 h-64 bg-gray-200 rounded-xl overflow-hidden shadow-sm relative group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80" alt="Students in class" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <!-- Overlay Gradien & Teks (Muncul saat di-hover) -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition duration-300 font-semibold">Active Learning</div>
+                    </div>
+
+                    <!-- Foto Gallery 2: Diskusi Kelompok -->
+                    <div class="snap-center shrink-0 w-80 h-64 bg-gray-200 rounded-xl overflow-hidden shadow-sm relative group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Group discussion" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition duration-300 font-semibold">Group Discussion</div>
+                    </div>
+
+                    <!-- Foto Gallery 3: Suasana Kelas -->
+                    <div class="snap-center shrink-0 w-80 h-64 bg-gray-200 rounded-xl overflow-hidden shadow-sm relative group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" alt="Classroom" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition duration-300 font-semibold">Modern Classroom</div>
+                    </div>
+
+                    <!-- Foto Gallery 4: Keceriaan Siswa -->
+                    <div class="snap-center shrink-0 w-80 h-64 bg-gray-200 rounded-xl overflow-hidden shadow-sm relative group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Happy students" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition duration-300 font-semibold">Student Life</div>
+                    </div>
+
+                    <!-- Foto Gallery 5: Lulusan / Pencapaian -->
+                    <div class="snap-center shrink-0 w-80 h-64 bg-gray-200 rounded-xl overflow-hidden shadow-sm relative group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80" alt="Graduation" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition duration-300 font-semibold">Excellence</div>
+                    </div>
+
+                    <!-- Foto Gallery 6: Aktivitas Sekolah -->
+                    <div class="snap-center shrink-0 w-80 h-64 bg-gray-200 rounded-xl overflow-hidden shadow-sm relative group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1491841550275-ad7854e35ca6?auto=format&fit=crop&w=800&q=80" alt="School activities" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition duration-300 font-semibold">Interactive Learning</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Facilities Section -->
+            <div>
+                <!-- Wrapper Judul dan Navigasi Panah menggunakan Flexbox -->
+                <div class="flex justify-between items-end mb-6">
+                    <h2 class="text-2xl font-bold text-gray-900">Our Facilities</h2>
+                    
+                    <!-- Tombol Panah -->
+                    <div class="hidden md:flex space-x-3">
+                        <button onclick="slideLeft('facility-slider')" class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:bg-amber-600 hover:text-white hover:border-amber-600 transition cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
+                        </button>
+                        <button onclick="slideRight('facility-slider')" class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:bg-amber-600 hover:text-white hover:border-amber-600 transition cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Container Slider Facility -->
+                <div id="facility-slider" class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-6 hide-scrollbar">
+                    <!-- Facility 1: Library -->
+                    <div class="snap-center shrink-0 w-80 h-64 bg-slate-200 rounded-xl overflow-hidden shadow-sm relative group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1568667256549-094345857637?auto=format&fit=crop&w=800&q=80" alt="Library" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition duration-300 font-semibold">Spacious Library</div>
+                    </div>
+
+                    <!-- Facility 2: Computer Lab -->
+                    <div class="snap-center shrink-0 w-80 h-64 bg-slate-200 rounded-xl overflow-hidden shadow-sm relative group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1580894732444-8ecbef79bd14?auto=format&fit=crop&w=800&q=80" alt="Computer Lab" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition duration-300 font-semibold">Computer Lab</div>
+                    </div>
+
+                    <!-- Facility 3: Sports Area -->
+                    <div class="snap-center shrink-0 w-80 h-64 bg-slate-200 rounded-xl overflow-hidden shadow-sm relative group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Sports Court" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition duration-300 font-semibold">Indoor Sports Court</div>
+                    </div>
+
+                    <!-- Facility 4: Science Lab -->
+                    <div class="snap-center shrink-0 w-80 h-64 bg-slate-200 rounded-xl overflow-hidden shadow-sm relative group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=800&q=80" alt="Science Lab" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition duration-300 font-semibold">Science Laboratory</div>
+                    </div>
+
+                    <!-- Facility 5: Outdoor Campus -->
+                    <div class="snap-center shrink-0 w-80 h-64 bg-slate-200 rounded-xl overflow-hidden shadow-sm relative group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=80" alt="Campus Environment" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition duration-300 font-semibold">Green Campus</div>
+                    </div>
+
+                    <!-- Facility 6: Collaboration Space -->
+                    <div class="snap-center shrink-0 w-80 h-64 bg-slate-200 rounded-xl overflow-hidden shadow-sm relative group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" alt="Collaboration Area" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition duration-300 font-semibold">Collaboration Space</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Partners Section -->
+    <section class="py-12 bg-slate-50 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-sm font-semibold text-gray-500 uppercase tracking-widest mb-8">In Partnership With</p>
+            <div class="flex flex-wrap justify-center items-center gap-10 md:gap-20">
+                <div class="text-xl font-bold text-gray-400 hover:text-gray-600 transition"><img src="images/889.jpg" class="w-auto h-12"></div>
+                <div class="text-xl font-bold text-gray-400 hover:text-gray-600 transition"><img src="images/classroom.png" class="w-auto h-12"></div>
+                <div class="text-xl font-bold text-gray-400 hover:text-gray-600 transition"><img src="images/logo_Google_for_Education_lockup_horizontal_RGB.png" class="w-auto h-12"></div>
+                <div class="text-xl font-bold text-gray-400 hover:text-gray-600 transition"><img src="images/microsoft_365-logo_brandlogos.net_7vzle.png" class="w-auto h-6"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-gray-400 text-sm">&copy; 2026 Sekolah Mahabodhi Vidya. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interaktivitas (Versi Expert dengan Smooth Easing & Drag-to-Scroll) -->
+    <script>
+        // --- 1. Script Efek Scroll Transparan ke Putih pada Navbar ---
+        const navbar = document.getElementById('navbar');
+        const logoWhite = document.getElementById('logo-white');
+        const logoColor = document.getElementById('logo-color');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.remove('bg-transparent', 'py-4');
+                navbar.classList.add('bg-white', 'shadow-md', 'py-1');
+                logoWhite.classList.replace('opacity-100', 'opacity-0');
+                logoColor.classList.replace('opacity-0', 'opacity-100');
+            } else {
+                navbar.classList.add('bg-transparent', 'py-4');
+                navbar.classList.remove('bg-white', 'shadow-md', 'py-1');
+                logoWhite.classList.replace('opacity-0', 'opacity-100');
+                logoColor.classList.replace('opacity-100', 'opacity-0');
+            }
+        });
+
+        // --- 2. Custom Smooth Easing Slider Kiri & Kanan ---
+        // Fungsi matematika untuk membuat pergerakan mulus (Ease-in-out)
+        // --- 2. Custom Smooth Easing Slider Kiri & Kanan ---
+        function smoothScroll(element, amount, duration) {
+            let start = element.scrollLeft;
+            let change = amount;
+            let startTime = performance.now();
+
+            // KUNCI SMOOTH: Matikan fitur 'snap' dari CSS selama JS melakukan animasi
+            element.style.scrollSnapType = 'none';
+
+            function animateScroll(currentTime) {
+                let elapsed = currentTime - startTime;
+                let progress = Math.min(elapsed / duration, 1); 
+                
+                // Rumus Easing EaseInOutCubic (Lebih dramatis dan halus dari sebelumnya)
+                let ease = progress < 0.5 ? 4 * progress * progress * progress : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+                
+                element.scrollLeft = start + (change * ease);
+                
+                if (elapsed < duration) {
+                    // Terus panggil frame berikutnya jika waktu belum habis
+                    requestAnimationFrame(animateScroll);
+                } else {
+                    // KUNCI SMOOTH: Nyalakan kembali 'snap' setelah animasi benar-benar selesai
+                    // Gunakan setTimeout kecil untuk memastikan browser sudah merender posisi terakhir
+                    setTimeout(() => {
+                        element.style.scrollSnapType = 'x mandatory';
+                    }, 50);
+                }
+            }
+            requestAnimationFrame(animateScroll);
+        }
+
+        // Fungsi klik tombol yang memanggil custom smooth scroll
+        function slideLeft(elementId) {
+            const slider = document.getElementById(elementId);
+            // Geser -336px selama 600 milidetik (0.6 detik)
+            smoothScroll(slider, -336, 600); 
+        }
+
+        function slideRight(elementId) {
+            const slider = document.getElementById(elementId);
+            // Geser +336px selama 600 milidetik (0.6 detik)
+            smoothScroll(slider, 336, 600); 
+        }
+
+
+        // --- 3. Implementasi Drag-to-Scroll (Mouse Interactivity) ---
+        // Mencari semua elemen yang menjadi slider
+        const sliders = document.querySelectorAll('.hide-scrollbar');
+        
+        sliders.forEach(slider => {
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            // Saat mouse diklik di dalam slider
+            slider.addEventListener('mousedown', (e) => {
+                isDown = true;
+                // Ubah kursor menjadi tangan menggenggam
+                slider.style.cursor = 'grabbing'; 
+                // Matikan fitur 'snap' sementara agar saat ditarik lebih leluasa (tidak tersendat)
+                slider.style.scrollSnapType = 'none'; 
+                
+                // Simpan koordinat awal mouse dan posisi scroll
+                startX = e.pageX - slider.offsetLeft;
+                scrollLeft = slider.scrollLeft;
+            });
+
+            // Saat mouse keluar dari area slider
+            slider.addEventListener('mouseleave', () => {
+                isDown = false;
+                slider.style.cursor = 'grab';
+                slider.style.scrollSnapType = 'x mandatory'; // Nyalakan snap kembali
+            });
+
+            // Saat klik mouse dilepas
+            slider.addEventListener('mouseup', () => {
+                isDown = false;
+                slider.style.cursor = 'grab';
+                slider.style.scrollSnapType = 'x mandatory'; // Nyalakan snap kembali
+            });
+
+            // Saat mouse digerakkan (di-drag)
+            slider.addEventListener('mousemove', (e) => {
+                if (!isDown) return; // Jika tidak diklik, abaikan
+                e.preventDefault(); // Mencegah highlight text atau image secara tidak sengaja
+                
+                const x = e.pageX - slider.offsetLeft;
+                const walk = (x - startX) * 1.5; // Angka 1.5 adalah kecepatan tarik (scroll-fast)
+                slider.scrollLeft = scrollLeft - walk;
+            });
+            
+            // Set kursor default saat diarahkan ke slider
+            slider.style.cursor = 'grab';
+        });
+    </script>
+</body>
+</html>
